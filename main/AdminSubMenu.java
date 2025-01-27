@@ -94,7 +94,7 @@ public class AdminSubMenu {
 		System.out.println("3. Delete pizza");
 		System.out.println("4. Display pizza Menu");
 		System.out.println("5. Display all customers");
-		System.out.println("6. Display all orders");
+		System.out.println("6. Display all orders!!");
 		System.out.println("7. Calculate total price");
 		System.out.print("Enter a choice - ");
 		int choice = sc.nextInt();
