@@ -17,7 +17,7 @@ public class CustomerDao implements AutoCloseable {
 	public CustomerDao() throws SQLException {
 		connection = DBUtil.getConnection();
 	}
-
+	// Insert Query
 	public void insertCustomer(Customer customer) throws SQLException {
 		String sql = "INSERT INTO customer(name,email,password,mobile) VALUES(?,?,?,?)";
 		try (PreparedStatement insertStatement = connection.prepareCall(sql)) {
@@ -28,7 +28,7 @@ public class CustomerDao implements AutoCloseable {
 			insertStatement.executeUpdate();
 		}
 	}
-
+	// Select Query
 	public Customer selectCustomer(String email, String password) throws SQLException {
 		Customer customer = new Customer();
 		String sql = "select * from customer where email = ? and password = ?";
